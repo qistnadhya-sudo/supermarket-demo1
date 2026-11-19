@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrillMaster | Western Delights</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Toast Notification -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Bar Atas (Alamat, No Tel, Waktu Operasi) -->
+  <div class="top-info-bar">
+    <div class="info-container">
+      <span>📍 Address: 12 Jln Tunku, KL</span>
+      <span>📞 Tel: 03-1234 5678</span>
+      <span>⏰ Mon-Sat 11am-10pm</span>
+    </div>
+  </div>
+
+  <!-- Header Utama Restoran -->
+  <header class="main-header">
+    <div class="header-content">
+      <div class="brand-logo">
+        <span class="logo-icon">🥩</span>
+        <div class="brand-text">
+          <h1>GRILLMASTER</h1>
+          <p>WESTERN DELIGHTS</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#" class="active">HOME</a>
+        <a href="#menuSection">MENU</a>
+        <a href="#">OUR STORY</a>
+        <a href="#">CONTACT</a>
+        <button id="orderNowBtn" class="order-now-btn">ORDER NOW</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Kandungan Utama Menu Western -->
+  <main class="main-container" id="menuSection">
+    
+    <div class="section-title-box">
+      <h2>SIGNATURE WESTERN FAVORITES</h2>
+    </div>
+
+    <!-- Grid Menu Makanan -->
+    <div class="menu-grid" id="menuGrid">
+      <!-- Dijana secara dinamik oleh script.js -->
+    </div>
+
+  </main>
+
+  <!-- Footer Restoran -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-links-left">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+      <div class="footer-social">
+        <span>Follow Us: Facebook 📘 📷</span>
+      </div>
+      <div class="footer-copy">
+        GrillMaster Western Delights &copy; 2026
+      </div>
+      <div class="footer-cart-summary">
+        Shopping Cart: <span id="footerCartCount">0 Item</span> (<span id="footerCartTotal">RM 0.00</span>)
+        <button class="view-cart-link" onclick="openCart()">View Cart</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="cartOverlay" class="cart-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>🛒 Your Shopping Cart</h3>
+      <button id="closeCartBtn" class="close-btn">&times;</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-drawer-footer">
+      <div class="form-group">
+        <label for="custName">Customer Name *</label>
+        <input type="text" id="custName" placeholder="Enter your name" />
+
+        <label for="orderType">Order Type</label>
+        <select id="orderType">
+          <option value="Dine-In">Dine-In at Restaurant</option>
+          <option value="Takeaway / Self-Pickup">Takeaway / Self-Pickup</option>
+          <option value="Delivery (+RM3.00)">Delivery (+RM3.00)</option>
+        </select>
+      </div>
+
+      <div class="total-row">
+        <span>Total Amount</span>
+        <strong id="cartTotal">RM 0.00</strong>
+      </div>
+
+      <button id="checkoutBtn" class="whatsapp-checkout-btn">
+        Send Order to WhatsApp 💬
+      </button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
